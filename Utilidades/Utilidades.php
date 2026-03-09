@@ -24,8 +24,25 @@ class Util
     }
 
     public static function leerNumeroEntero(string $msj) : int  {
-        $numero = intval(readline($msj . ': ')) ;
-        return $numero;
+        while (true) {
+            $numero = intval(readline($msj . ': '));
+            if (filter_var($numero, FILTER_VALIDATE_INT) == true) {
+                return $numero;            
+            } else {
+                echo 'Debe Escribir un Número Entero...' . PHP_EOL;                
+            }
+            
+        }
+    }
+    public static function leerNumerosDecimales(string $msj) : float {
+        while (true) {
+            $numero = floatval(readline($msj . ': '));
+            if (filter_var(FILTER_VALIDATE_FLOAT) == true) {
+                return $numero;
+            } else {
+                echo 'Debe escribir un número...' . PHP_EOL;
+            }
+            
+        }
     }
 }
-
