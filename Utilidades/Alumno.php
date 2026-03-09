@@ -46,7 +46,7 @@ class Alumno
         return $this->matricula;
     }
 
-    public function isSexo(): bool
+    public function getSexo(): bool
     {
         return $this->sexo;
     }
