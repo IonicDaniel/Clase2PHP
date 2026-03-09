@@ -2,7 +2,7 @@
 
 namespace Utilidades;
 
-class Util
+class Utilidades
 {
    public static function linea(int $largo): void
     {

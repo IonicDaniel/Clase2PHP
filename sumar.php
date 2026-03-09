@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 require_once    'Utilidades/Utilidades.php';
 
-use Utilidades\Util;
+use Utilidades\Utilidades as Util;
 
 function main() : void {
     Util::encabezado('sumar números', 36);
