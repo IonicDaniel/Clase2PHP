@@ -48,7 +48,7 @@ function obtenerSexo(bool $sexo): string {
     } else {
         return 'Masculino (♂)';
     }*/
-    return $sexo ? 'Femenino (♀)' : 'Masculino (♂)';
+    return $sexo ? 'Femenino ♀' : 'Masculino ♂';
 }
 
 function obtenerTurno(int $turno) : string {

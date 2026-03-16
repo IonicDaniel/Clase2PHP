@@ -7,7 +7,7 @@ require_once    'Utilidades/Utilidades.php';
 use Utilidades\Utilidades as Util;
 
 function main() : void {
-    Util::encabezado('sumar números', 36);
+    Util::encabezado('sumar nÚmeros', 36);
     $numero1 = Util::leerNumeroEntero('Ingresa primer número');
     $numero2 = Util::leerNumeroEntero('Ingresa segundo número');
     $numero3 = Util::leerNumeroEntero('Ingresa tercer número');

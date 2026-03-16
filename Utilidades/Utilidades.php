@@ -4,7 +4,7 @@ namespace Utilidades;
 
 class Utilidades
 {
-   public static function linea(int $largo): void
+    public static function linea(int $largo): void
     {
         echo str_repeat('═', $largo) . PHP_EOL;
     }
@@ -23,18 +23,19 @@ class Utilidades
         self::linea($largo);
     }
 
-    public static function leerNumeroEntero(string $msj) : int  {
+    public static function leerNumeroEntero(string $msj): int
+    {
         while (true) {
             $numero = intval(readline($msj . ': '));
             if (filter_var($numero, FILTER_VALIDATE_INT) == true) {
-                return $numero;            
+                return $numero;
             } else {
-                echo 'Debe Escribir un Número Entero...' . PHP_EOL;                
+                echo 'Debe Escribir un Número Entero...' . PHP_EOL;
             }
-            
         }
     }
-    public static function leerNumerosDecimales(string $msj) : float {
+    public static function leerNumerosDecimales(string $msj): float
+    {
         while (true) {
             $numero = floatval(readline($msj . ': '));
             if (filter_var(FILTER_VALIDATE_FLOAT) == true) {
@@ -42,7 +43,19 @@ class Utilidades
             } else {
                 echo 'Debe escribir un número...' . PHP_EOL;
             }
-            
+        }
+    }
+
+    public static function leerTexto(string $msj, string $aviso): string
+    {
+        while (true) {
+
+            $texto = readline($msj . ': ');
+            if (!$texto== '') {
+                return $texto;
+            } else {
+                echo "Debe escribir $aviso . \n";
+            }
         }
     }
 }
